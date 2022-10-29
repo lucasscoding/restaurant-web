@@ -3,7 +3,7 @@ export type HttpRequest = {
   url: string
   params?: any
   method?: 'POST' | 'GET' | 'PUT' | 'DELETE'
-  body: any
+  body?: any
 }
 
 export type HttpResponse<T> = {
