@@ -1,5 +1,5 @@
 import { Restaurant } from '../../domain/models/restaurant'
-import { RestaurantStatus } from '../../domain/models/restaurant-status'
+import { RestaurantStats } from '../../domain/models/restaurant-stats'
 import { HostConfig } from '../../domain/models/url-configuration'
 import { RestaurantUseCase } from '../../domain/usecases/restaurant-usecase'
 import { HttpClient } from '../protocols/http-client'
@@ -22,7 +22,7 @@ export class RestaurantService implements RestaurantUseCase {
     return parseJson
   }
 
-  async status(): Promise<RestaurantStatus> {
+  async status(): Promise<RestaurantStats> {
     const response = await this.httpClientService.send({ method: 'GET', url: this.host.URL.STATS })
     return response.body
   }

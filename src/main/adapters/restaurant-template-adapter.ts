@@ -1,16 +1,20 @@
 import React from 'react'
 import { Restaurant } from '../../domain/models/restaurant'
-import { RestaurantStatus } from '../../domain/models/restaurant-status'
+import { RestaurantStats } from '../../domain/models/restaurant-stats'
 import { RestaurantFactory } from '../factories/restaurant-factory'
 
 type Props = any
 
 type State = {
-   status: RestaurantStatus
-   restaurants: Array<Restaurant> 
+   status: RestaurantStats | {}
+   restaurants: Array<Restaurant> | []
 }
 
 export abstract class AbstractRestaurantTemplateAdapter extends React.Component<Props, State> {
+  state: State = {
+    status: {},
+    restaurants: []
+  }
   handleLoadStatus(): void {
     const restaurantService = RestaurantFactory.createRestaurantService()
     restaurantService.status().then(status => this.setState({ status }))
