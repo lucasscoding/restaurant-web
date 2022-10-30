@@ -1,7 +1,7 @@
 import { Restaurant } from '../../domain/models/restaurant'
 import { RestaurantStatus } from '../../domain/models/restaurant-status'
 import { RestaurantUseCase } from '../../domain/usecases/restaurant-usecase'
-import { HttpClient } from '../protocols/http-client';
+import { HttpClient } from '../protocols/http-client'
 
 export class RestaurantService implements RestaurantUseCase {
   private readonly HOST: string = 'http://opentable.herokuapp.com/api'
