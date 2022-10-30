@@ -5,7 +5,7 @@ type Props = {
   restaurant: Restaurant
 }
 
-export const Line = (props: Props) => {
+export const Line: React.FC<Props> = (props: Props) => {
   return (
     <div className={'container-line'}>
       <h3>{props.restaurant.name}</h3>
