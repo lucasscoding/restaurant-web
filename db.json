@@ -1,0 +1,56 @@
+{
+  "stats": {
+    "countries": 20,
+    "cities": 2700,
+    "restaurants": 25000
+  },
+  "cities": {
+    "count": 1234,
+    "cities": [
+      "Chicago",
+      "San Francisco",
+      "New York"
+    ]
+  },
+  "restaurants": {
+    "count": 521,
+    "per_page": 25,
+    "current_page": 1,
+    "restaurants": [
+      {
+        "id": 107257,
+        "name": "Las Tablas Colombian Steak House",
+        "address": "2942 N Lincoln Ave",
+        "city": "Chicago",
+        "state": "IL",
+        "area": "Chicago / Illinois",
+        "postal_code": "60657",
+        "country": "US",
+        "phone": "7738712414",
+        "lat": 41.935137,
+        "lng": -87.662815,
+        "price": 2,
+        "reserve_url": "http://www.opentable.com/single.aspx?rid=107257",
+        "mobile_reserve_url": "http://mobile.opentable.com/opentable/?restId=107257",
+        "image_url": "https://www.opentable.com/img/restimages/107257.jpg"
+      }
+    ]
+  },
+  "rest": [{
+    "id": 107257,
+    "name": "Las Tablas Colombian Steak House",
+    "address": "2942 N Lincoln Ave",
+    "city": "Chicago",
+    "state": "IL",
+    "area": "Chicago / Illinois",
+    "postal_code": "60657",
+    "country": "US",
+    "phone": "7738712414",
+    "lat": 41.935137,
+    "lng": -87.662815,
+    "price": 2,
+    "reserve_url": "http://www.opentable.com/single.aspx?rid=107257",
+    "mobile_reserve_url": "http://mobile.opentable.com/opentable/?restId=107257",
+    "image_url": "https://www.opentable.com/img/restimages/107257.jpg"
+  }]
+}
