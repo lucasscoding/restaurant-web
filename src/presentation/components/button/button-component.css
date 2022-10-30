@@ -13,6 +13,7 @@
   width: 12rem;
   background-color: #646cff;
   color: #f9f9f9;
+  height: 6rem;
 }
 
 .rank-button:hover {
@@ -28,6 +29,7 @@
   line-height: 1;
   margin-top: -18px;
   height: 0.5rem;
+  padding: 0.15rem;
 }
 
 .rank-button h3::first-letter {

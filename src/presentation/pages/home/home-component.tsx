@@ -3,6 +3,7 @@ import { AbstractRestaurantTemplateAdapter } from '../../../main/adapters/restau
 import { Stats } from '../../components/stats/stats-component'
 import { Button } from '../../components/button/button-component'
 import './home-component.css'
+import { Line } from '../../components/line/line-component'
 
 export default class HomeComponent extends AbstractRestaurantTemplateAdapter {
 
@@ -34,10 +35,10 @@ export default class HomeComponent extends AbstractRestaurantTemplateAdapter {
           <Stats title={'countries'} stats={this.state.stats.countries} />
           <Stats title={'cities'} stats={this.state.stats.cities} />
           <Stats title={'restaurants'} stats={this.state.stats.restaurants} />
-          <Button title={'Top 5'} subtitle={'Toronto'} onClick={() => this.handleLoadStatus()}/>
+          <Button title={'Top 5'} subtitle={'Toronto'} onClick={() => this.handleLoadRestaurant()}/>
         </div>
         <div className={'container-list'}>
-
+          {!!this.state.restaurants.length && this.state.restaurants.map(restaurant => <Line restaurant={restaurant} />)}
         </div>
         <br />
         <p className={'read-the-docs'}>

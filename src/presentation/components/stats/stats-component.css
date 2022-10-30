@@ -11,7 +11,7 @@
 .container-stats h2 {
   font-size: 1.5rem;
   line-height: 1;
-  margin: 0;
+  padding: 0.4rem;
 }
 
 .container-stats h2::first-letter {

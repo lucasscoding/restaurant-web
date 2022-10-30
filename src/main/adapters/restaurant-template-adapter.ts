@@ -26,6 +26,7 @@ export abstract class AbstractRestaurantTemplateAdapter extends React.Component<
   
   componentDidMount() {
     this.handleLoadStatus()
+    //this.handleLoadRestaurant()
   }
 
   handleLoadStatus(): void {

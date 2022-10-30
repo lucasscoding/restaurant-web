@@ -1,0 +1,35 @@
+.container-line {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid rgb(223, 219, 219);
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.container-line h3 {
+  margin-top: 1rem;
+}
+
+.container-line .infos {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  
+}
+
+.container-line .infos div {
+  display: flex;
+  padding: 1rem;
+}
+
+.container-line .infos div p {
+  margin-right: 10px;
+  border-right: 1px solid rgb(223, 219, 219);
+  padding: 0 10px;
+}
+
+.border-node { 
+  border-color: transparent !important;
+}
