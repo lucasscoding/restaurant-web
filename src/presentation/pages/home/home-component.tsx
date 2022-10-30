@@ -2,8 +2,8 @@ import reactLogo from '../../assets/react.svg'
 import { AbstractRestaurantTemplateAdapter } from '../../../main/adapters/restaurant-template-adapter'
 import { Stats } from '../../components/stats/stats-component'
 import { Button } from '../../components/button/button-component'
-import './home-component.css'
 import { Line } from '../../components/line/line-component'
+import './home-component.css'
 
 export default class HomeComponent extends AbstractRestaurantTemplateAdapter {
 
@@ -11,7 +11,7 @@ export default class HomeComponent extends AbstractRestaurantTemplateAdapter {
     super(props)
   }
 
-  handleLoadStatusError(error: Error) {
+  handleLoadStatsError(error: Error) {
     console.log(error.message)
   }
 
@@ -19,7 +19,7 @@ export default class HomeComponent extends AbstractRestaurantTemplateAdapter {
     console.log(error.message)
   }
 
-  render(): any {
+  render(): JSX.Element {
     return (
       <div>
         <div>
@@ -38,7 +38,7 @@ export default class HomeComponent extends AbstractRestaurantTemplateAdapter {
           <Button title={'Top 5'} subtitle={'Toronto'} onClick={() => this.handleLoadRestaurant()}/>
         </div>
         <div className={'container-list'}>
-          {!!this.state.restaurants.length && this.state.restaurants.map(restaurant => <Line restaurant={restaurant} />)}
+          {!!this.state.restaurants.length && this.state.restaurants.map(restaurant => <Line restaurant={restaurant} key={restaurant.id} />)}
         </div>
         <br />
         <p className={'read-the-docs'}>

@@ -25,13 +25,13 @@ export abstract class AbstractRestaurantTemplateAdapter extends React.Component<
   }
   
   componentDidMount() {
-    this.handleLoadStatus()
+    this.handleLoadStats()
     //this.handleLoadRestaurant()
   }
 
-  handleLoadStatus(): void {
-    this.restaurantService.status().then(stats => this.setState({ stats }))
-    .catch(this.handleLoadStatusError)
+  handleLoadStats(): void {
+    this.restaurantService.stats().then(stats => this.setState({ stats }))
+    .catch(this.handleLoadStatsError)
   }
 
   handleLoadRestaurant(): void {
@@ -39,7 +39,7 @@ export abstract class AbstractRestaurantTemplateAdapter extends React.Component<
     .catch(this.handleLoadRestaurantError) 
   }
 
-  abstract handleLoadStatusError(error: Error): void
+  abstract handleLoadStatsError(error: Error): void
 
   abstract handleLoadRestaurantError(error: Error): void
   

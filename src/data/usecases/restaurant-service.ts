@@ -20,13 +20,13 @@ export class RestaurantService implements RestaurantUseCase {
         const { postal_code, reserve_url, mobile_reserve_url, image_url, ...res} = restaurant
         return { ...res, postalCode: postal_code, reserveUrl: reserve_url, mobileReserveUrl: mobile_reserve_url, imageUrl: image_url }
       })
-      return parseJson
+      return parseJson.slice(0, 5)
     } catch(error) {
       throw error
     }
   }
 
-  async status(): Promise<RestaurantStats> {
+  async stats(): Promise<RestaurantStats> {
     try {
       const response = await this.httpClientService.send({ method: 'GET', url: this.host.URL.STATS })
       return response.body
