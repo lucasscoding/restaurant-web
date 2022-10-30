@@ -23,7 +23,8 @@ export abstract class AbstractRestaurantTemplateAdapter extends React.Component<
     .catch(this.handleLoadRestaurantError) 
   }
 
-  abstract handleLoadStatusError(error: any): any
+  abstract handleLoadStatusError(error: Error): void
 
-  abstract handleLoadRestaurantError(error: any): any
+  abstract handleLoadRestaurantError(error: Error): void
+  
 }

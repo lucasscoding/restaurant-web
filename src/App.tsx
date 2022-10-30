@@ -15,7 +15,7 @@ export default class App extends AbstractRestaurantTemplateAdapter {
   }
 
   componentDidMount(): void {
-    console.log(import.meta.env.VITE_URL_HOST)
+    console.log(import.meta.env.VITE_URL_HOST_DEV, import.meta.env.PROD)
   }
 
   render(): any {
