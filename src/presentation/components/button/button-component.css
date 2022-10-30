@@ -1,0 +1,43 @@
+.rank-button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 12rem;
+  background-color: #646cff;
+  color: #f9f9f9;
+}
+
+.rank-button:hover {
+  border-color: #646cff;
+}
+
+.rank-button:focus, .rank-button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.rank-button h3 {
+  font-size: 1rem;
+  line-height: 1;
+  margin-top: -18px;
+  height: 0.5rem;
+}
+
+.rank-button h3::first-letter {
+  text-transform: uppercase;
+}
+
+.rank-button span {
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: inherit;
+  height: 0.5rem;
+  padding: auto;
+}

@@ -1,29 +1,40 @@
 import React from 'react'
 import { Restaurant } from '../../domain/models/restaurant'
 import { RestaurantStats } from '../../domain/models/restaurant-stats'
+import { RestaurantUseCase } from '../../domain/usecases/restaurant-usecase'
 import { RestaurantFactory } from '../factories/restaurant-factory'
 
 type Props = any
 
 type State = {
-   status: RestaurantStats | {}
-   restaurants: Array<Restaurant> | []
+   stats: RestaurantStats
+   restaurants: Array<Restaurant>
 }
 
 export abstract class AbstractRestaurantTemplateAdapter extends React.Component<Props, State> {
+  private readonly restaurantService: RestaurantUseCase
+
   state: State = {
-    status: {},
+    stats: { countries: 0, cities: 0, restaurants: 0 },
     restaurants: []
   }
+
+  constructor(props: Props) {
+    super(props)
+    this.restaurantService = RestaurantFactory.createRestaurantService()
+  }
+  
+  componentDidMount() {
+    this.handleLoadStatus()
+  }
+
   handleLoadStatus(): void {
-    const restaurantService = RestaurantFactory.createRestaurantService()
-    restaurantService.status().then(status => this.setState({ status }))
+    this.restaurantService.status().then(stats => this.setState({ stats }))
     .catch(this.handleLoadStatusError)
   }
 
   handleLoadRestaurant(): void {
-    const restaurantService = RestaurantFactory.createRestaurantService()
-    restaurantService.load().then(restaurants => this.setState({ restaurants }))
+    this.restaurantService.load().then(restaurants => this.setState({ restaurants }))
     .catch(this.handleLoadRestaurantError) 
   }
 
