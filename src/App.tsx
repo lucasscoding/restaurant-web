@@ -31,8 +31,8 @@ export default class App extends AbstractRestaurantTemplateAdapter {
         </div>
         <h1>Vite + React</h1>
         <div className="card">
-          <button onClick={() => this.handleLoadStatus()}>
-            count is {JSON.stringify(this.state.status)}
+          <button onClick={() => this.handleLoadRestaurant()}>
+            count is {JSON.stringify(this.state.restaurants)}
           </button>
           <p>
             Edit <code>src/App.tsx</code> and save to test HMR
