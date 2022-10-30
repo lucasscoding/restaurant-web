@@ -2,8 +2,18 @@ import { useState } from 'react'
 import reactLogo from './presentation/assets/react.svg'
 import './App.css'
 import React from 'react'
+import { AbstractRestaurantTemplateAdapter } from './main/adapters/restaurant-template-adapter'
 
-export default class App extends React.Component<any, any> {
+export default class App extends AbstractRestaurantTemplateAdapter {
+
+  handleLoadStatusError(error: any) {
+    console.log(error)
+  }
+
+  handleLoadRestaurantError(error: any) {
+    console.log(error)
+  }
+
   state: any = { count: 0 }
 
   render(): any {
@@ -19,7 +29,7 @@ export default class App extends React.Component<any, any> {
         </div>
         <h1>Vite + React</h1>
         <div className="card">
-          <button onClick={() => this.setState({ count: this.state.count + 1})}>
+          <button onClick={() => this.handleLoadRestaurant()}>
             count is {this.state.count}
           </button>
           <p>
