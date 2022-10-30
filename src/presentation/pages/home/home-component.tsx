@@ -19,7 +19,7 @@ export default class HomeComponent extends AbstractRestaurantTemplateAdapter {
     console.log(error.message)
   }
 
-  render(): JSX.Element {
+  render(): React.ReactNode {
     return (
       <div>
         <div>
