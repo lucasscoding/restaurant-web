@@ -6,12 +6,12 @@ import { AbstractRestaurantTemplateAdapter } from './main/adapters/restaurant-te
 
 export default class App extends AbstractRestaurantTemplateAdapter {
 
-  handleLoadStatusError(error: any) {
-    console.log(error)
+  handleLoadStatusError(error: Error) {
+    console.log(error.message)
   }
 
-  handleLoadRestaurantError(error: any) {
-    console.log(error)
+  handleLoadRestaurantError(error: Error) {
+    console.log(error.message)
   }
 
   componentDidMount(): void {
@@ -31,8 +31,8 @@ export default class App extends AbstractRestaurantTemplateAdapter {
         </div>
         <h1>Vite + React</h1>
         <div className="card">
-          <button onClick={() => this.handleLoadRestaurant()}>
-            count is 0
+          <button onClick={() => this.handleLoadStatus()}>
+            count is {JSON.stringify(this.state.status)}
           </button>
           <p>
             Edit <code>src/App.tsx</code> and save to test HMR

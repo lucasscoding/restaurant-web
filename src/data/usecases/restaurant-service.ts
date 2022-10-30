@@ -14,17 +14,24 @@ export class RestaurantService implements RestaurantUseCase {
   }
 
   async load(): Promise<Array<Restaurant>> {
-    const response = await this.httpClientService.send({method: 'GET', url: this.host.URL.RESTAURANT, params: { city: 'Toronto' }})
-    const parseJson = response.body.map((restaurant: any): Restaurant => {
-      const { postal_code, reserve_url, mobile_reserve_url, image_url, ...res} = restaurant
-      return { ...res, postalCode: postal_code, reserveUrl: reserve_url, mobileReserveUrl: mobile_reserve_url, imageUrl: image_url }
-    })
-    return parseJson
+    try {
+      const response = await this.httpClientService.send({method: 'GET', url: this.host.URL.RESTAURANT, params: { city: 'Toronto' }})
+      const parseJson = response.body.map((restaurant: any): Restaurant => {
+        const { postal_code, reserve_url, mobile_reserve_url, image_url, ...res} = restaurant
+        return { ...res, postalCode: postal_code, reserveUrl: reserve_url, mobileReserveUrl: mobile_reserve_url, imageUrl: image_url }
+      })
+      return parseJson
+    } catch(error) {
+      throw error
+    }
   }
 
   async status(): Promise<RestaurantStats> {
-    const response = await this.httpClientService.send({ method: 'GET', url: this.host.URL.STATS })
-    return response.body
+    try {
+      const response = await this.httpClientService.send({ method: 'GET', url: this.host.URL.STATS })
+      return response.body
+    } catch (error) {
+      throw error
+    }
   }
-
 }
