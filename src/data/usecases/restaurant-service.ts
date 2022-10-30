@@ -4,15 +4,16 @@ import { RestaurantUseCase } from '../../domain/usecases/restaurant-usecase'
 import { HttpClient } from '../protocols/http-client'
 
 export class RestaurantService implements RestaurantUseCase {
-  private readonly HOST: string = 'http://opentable.herokuapp.com/api'
+  private readonly host: string
   private readonly httpClientService: HttpClient
 
-  constructor(httpClientService: HttpClient) {
+  constructor(host: string, httpClientService: HttpClient) {
+    this.host = host
     this.httpClientService = httpClientService
   }
 
   async load(): Promise<Array<Restaurant>> {
-    const response = await this.httpClientService.send({method: 'GET', url: this.HOST + '/restaurants', params: { city: 'Toronto' }})
+    const response = await this.httpClientService.send({method: 'GET', url: this.host + '/restaurants', params: { city: 'Toronto' }})
     const parseJson = response.body.map((restaurant: any): Restaurant => {
       const { postal_code, reserve_url, mobile_reserve_url, image_url, ...res} = restaurant
       return { ...res, postalCode: postal_code, reserveUrl: reserve_url, mobileReserveUrl: mobile_reserve_url, imageUrl: image_url }
@@ -21,7 +22,7 @@ export class RestaurantService implements RestaurantUseCase {
   }
 
   async status(): Promise<RestaurantStatus> {
-    const response = await this.httpClientService.send({ method: 'GET', url: this.HOST + '/stats' })
+    const response = await this.httpClientService.send({ method: 'GET', url: this.host + '/stats' })
     return response.body
   }
 

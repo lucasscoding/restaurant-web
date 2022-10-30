@@ -14,7 +14,9 @@ export default class App extends AbstractRestaurantTemplateAdapter {
     console.log(error)
   }
 
-  state: any = { count: 0 }
+  componentDidMount(): void {
+    console.log(import.meta.env.VITE_URL_HOST)
+  }
 
   render(): any {
     return (
@@ -30,7 +32,7 @@ export default class App extends AbstractRestaurantTemplateAdapter {
         <h1>Vite + React</h1>
         <div className="card">
           <button onClick={() => this.handleLoadRestaurant()}>
-            count is {this.state.count}
+            count is 0
           </button>
           <p>
             Edit <code>src/App.tsx</code> and save to test HMR
