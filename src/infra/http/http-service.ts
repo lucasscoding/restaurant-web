@@ -5,6 +5,6 @@ export class HttpClientService implements HttpClient {
     const { method, headers } = request
     const url = request.params ? request.url + '?' + new URLSearchParams(request.params) : request.url
     const response = await fetch(url, { method, headers })
-    return await response.json()
+    return { statusCode: response.status, body: await response.json() }
   }
 }
