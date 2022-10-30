@@ -39,8 +39,9 @@ export default class HomeComponent extends AbstractRestaurantTemplateAdapter {
         <div className={'container-list'}>
 
         </div>
+        <br />
         <p className={'read-the-docs'}>
-          Web Page created by <code>Lucas Lopes</code>
+          Web page created by <code>Lucas Lopes</code>
         </p>
       </div>
     )
