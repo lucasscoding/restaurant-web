@@ -1,8 +1,9 @@
-import { Restaurant } from '../../domain/models/restaurant'
-import { RestaurantStats } from '../../domain/models/restaurant-stats'
-import { HostConfig } from '../../domain/models/url-configuration'
-import { RestaurantUseCase } from '../../domain/usecases/restaurant-usecase'
-import { HttpClient } from '../protocols/http-client'
+// import { Restaurant } from '../../domain/models/restaurant'
+import { Restaurant } from '@/core/domain/models/restaurant'
+import { RestaurantStats } from '@/core/domain/models/restaurant-stats'
+import { HostConfig } from '@/core/domain/models/url-configuration'
+import { RestaurantUseCase } from '@/core/domain/usecases/restaurant-usecase'
+import { HttpClient } from '@/core/data/protocols/http-client'
 
 export class RestaurantService implements RestaurantUseCase {
   private readonly host: HostConfig

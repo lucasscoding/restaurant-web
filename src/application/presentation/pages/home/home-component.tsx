@@ -1,8 +1,8 @@
-import reactLogo from '../../assets/react.svg'
-import { AbstractRestaurantTemplateAdapter } from '../../../main/adapters/restaurant-template-adapter'
-import { Stats } from '../../components/stats/stats-component'
-import { Button } from '../../components/button/button-component'
-import { Line } from '../../components/line/line-component'
+import reactLogo from '@/application/assets/react.svg'
+import { AbstractRestaurantTemplateAdapter } from '@/application/main/adapters/restaurant-template-adapter'
+import { Stats } from '@/application/presentation/components/stats/stats-component'
+import { Button } from '@/application/presentation/components/button/button-component'
+import { Line } from '@/application/presentation/components/line/line-component'
 import './home-component.css'
 
 export default class HomeComponent extends AbstractRestaurantTemplateAdapter {

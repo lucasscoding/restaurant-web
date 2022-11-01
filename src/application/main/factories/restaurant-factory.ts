@@ -1,6 +1,6 @@
-import { RestaurantService } from '../../../core/data/usecases/restaurant-service'
-import { HttpClientService } from '../../../infra/http/http-service'
-import { hostConfig } from '../config/env-config'
+import { RestaurantService } from '@/core/data/usecases/restaurant-service'
+import { HttpClientService } from '@/infra/http/http-service'
+import { hostConfig } from '@/application/main/config/env-config'
 
 export class RestaurantFactory {
   public static createRestaurantService(): RestaurantService {
