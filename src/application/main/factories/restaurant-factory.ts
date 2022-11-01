@@ -1,5 +1,5 @@
-import { RestaurantService } from '../../core/data/usecases/restaurant-service'
-import { HttpClientService } from '../../infra/http/http-service'
+import { RestaurantService } from '../../../core/data/usecases/restaurant-service'
+import { HttpClientService } from '../../../infra/http/http-service'
 import { hostConfig } from '../config/env-config'
 
 export class RestaurantFactory {

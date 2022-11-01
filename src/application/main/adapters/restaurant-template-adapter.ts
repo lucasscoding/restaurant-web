@@ -1,7 +1,7 @@
 import React from 'react'
-import { Restaurant } from '../../core/domain/models/restaurant'
-import { RestaurantStats } from '../../core/domain/models/restaurant-stats'
-import { RestaurantUseCase } from '../../core/domain/usecases/restaurant-usecase'
+import { Restaurant } from '../../../core/domain/models/restaurant'
+import { RestaurantStats } from '../../../core/domain/models/restaurant-stats'
+import { RestaurantUseCase } from '../../../core/domain/usecases/restaurant-usecase'
 import { RestaurantFactory } from '../factories/restaurant-factory'
 
 type Props = any

@@ -1,4 +1,4 @@
-import { HttpClient } from '../../../src/data/protocols/http-client'
+import { HttpClient } from '../../../src/core/data/protocols/http-client'
 import { HttpClientService } from '../../../src/infra/http/http-service'
 
 describe('HttpClientService', () => {
@@ -16,6 +16,7 @@ describe('HttpClientService', () => {
   })
 
   it('should to make a http request and return 404', async () => {
+    jest.spyOn(httpClientService, 'send').mockResolvedValueOnce({statusCode: 404})
     const response = await httpClientService.send({ url })
     expect(404).toBe(response.statusCode)
   })

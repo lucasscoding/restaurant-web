@@ -1,5 +1,5 @@
 import reactLogo from '../../assets/react.svg'
-import { AbstractRestaurantTemplateAdapter } from '../../../application/adapters/restaurant-template-adapter'
+import { AbstractRestaurantTemplateAdapter } from '../../../main/adapters/restaurant-template-adapter'
 import { Stats } from '../../components/stats/stats-component'
 import { Button } from '../../components/button/button-component'
 import { Line } from '../../components/line/line-component'
