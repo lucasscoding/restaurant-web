@@ -1,4 +1,4 @@
-import { RestaurantService } from '../../data/usecases/restaurant-service'
+import { RestaurantService } from '../../core/data/usecases/restaurant-service'
 import { HttpClientService } from '../../infra/http/http-service'
 import { hostConfig } from '../config/env-config'
 

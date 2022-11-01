@@ -1,4 +1,4 @@
-import { UrlConfig } from '../../domain/models/url-configuration'
+import { UrlConfig } from '../../core/domain/models/url-configuration'
 
 const config: UrlConfig = {
   development: {

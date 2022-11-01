@@ -1,4 +1,4 @@
-import { Restaurant } from '../../../domain/models/restaurant'
+import { Restaurant } from '../../../core/domain/models/restaurant'
 import './line-component.css'
 
 type Props = {
