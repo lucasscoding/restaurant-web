@@ -1,4 +1,4 @@
-import reactLogo from '@/application/assets/react.svg'
+import reactLogo from '../../assets/react.svg'
 import { AbstractRestaurantTemplateAdapter } from '@/application/main/adapters/restaurant-template-adapter'
 import { Stats } from '@/application/presentation/components/stats/stats-component'
 import { Button } from '@/application/presentation/components/button/button-component'
