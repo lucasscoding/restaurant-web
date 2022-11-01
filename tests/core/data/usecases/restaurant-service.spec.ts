@@ -1,9 +1,9 @@
 
-import { HttpClient, HttpRequest, HttpResponse } from '../../../src/core/data/protocols/http-client'
-import { RestaurantUseCase } from '../../../src/core/domain/usecases/restaurant-usecase'
+import { HttpClient } from '../../../../src/core/data/protocols/http-client'
+import { RestaurantUseCase } from '../../../../src/core/domain/usecases/restaurant-usecase'
 import { hostConfig } from '../mocks/configs/env-config'
 import { HttpClientStub } from '../mocks/stubs/http-client-stub'
-import { RestaurantService } from '../../../src/core/data/usecases/restaurant-service'
+import { RestaurantService } from '../../../../src/core/data/usecases/restaurant-service'
 
 describe('RestaurantService', () => {
   let restaurantService: RestaurantUseCase
