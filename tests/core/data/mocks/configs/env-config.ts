@@ -1,4 +1,4 @@
-import { UrlConfig } from '../../../../../src/core/domain/models/url-configuration'
+import {UrlConfig} from '../../../../../src/core/domain/models/url-configuration';
 
 const config: UrlConfig = {
   development: {
@@ -7,9 +7,9 @@ const config: UrlConfig = {
       STATS: '/stats',
       RESTAURANT: '/restaurants',
       CITY: '/cities',
-      COUNTRY: '/countries'
-    }
-  }
-}
+      COUNTRY: '/countries',
+    },
+  },
+};
 
-export const hostConfig = config['development']
+export const hostConfig = config['development'];

@@ -1,10 +1,10 @@
-import './button-component.css'
+import './button-component.css';
 
 type Props = {
-  title: string
-  subtitle: string
-  onClick: React.MouseEventHandler 
-}
+  title: string;
+  subtitle: string;
+  onClick: React.MouseEventHandler;
+};
 
 export const Button: React.FC<Props> = (props: Props) => {
   return (
@@ -12,5 +12,5 @@ export const Button: React.FC<Props> = (props: Props) => {
       <h3>{props.title}</h3>
       <span>{props.subtitle}</span>
     </button>
-  )
-}
+  );
+};

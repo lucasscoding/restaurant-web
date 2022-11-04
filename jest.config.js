@@ -3,10 +3,10 @@ export default {
   collectCoverageFrom: [
     '<rootDir>/src/**/*.ts',
     '!<rootDir>/src/application/**',
-    '!<rootDir>/src/**/index.ts'
+    '!<rootDir>/src/**/index.ts',
   ],
   coverageDirectory: 'coverage',
   transform: {
-    '.+\\.ts$': 'ts-jest'
-  }
-}
+    '.+\\.ts$': 'ts-jest',
+  },
+};

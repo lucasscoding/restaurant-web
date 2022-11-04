@@ -1,5 +1,4 @@
-import HomeComponent from '@/application/presentation/pages/home/home-component'
+import HomeComponent from '@/application/presentation/pages/home/home-component';
 
-const App = HomeComponent
-export default App 
-
+const App = HomeComponent;
+export default App;

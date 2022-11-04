@@ -1,9 +1,9 @@
-import { Restaurant } from '@/core/domain/models/restaurant'
-import './line-component.css'
+import {Restaurant} from '@/core/domain/models/restaurant';
+import './line-component.css';
 
 type Props = {
-  restaurant: Restaurant
-}
+  restaurant: Restaurant;
+};
 
 export const Line: React.FC<Props> = (props: Props) => {
   return (
@@ -11,11 +11,15 @@ export const Line: React.FC<Props> = (props: Props) => {
       <h3>{props.restaurant.name}</h3>
       <div className={'infos'}>
         <div>
-          <p>City: <code>{props.restaurant.city}</code></p>
-          <p>Address: <code>{props.restaurant.address}</code></p>
+          <p>
+            City: <code>{props.restaurant.city}</code>
+          </p>
+          <p>
+            Address: <code>{props.restaurant.address}</code>
+          </p>
           <p className={'border-node'}>Phone: {props.restaurant.phone}</p>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};

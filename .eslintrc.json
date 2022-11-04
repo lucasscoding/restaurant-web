@@ -1,0 +1,9 @@
+{
+  "extends": "./node_modules/gts/",
+  "rules": {
+    "@typescript-eslint/no-explicit-any": "Off",
+    "no-useless-catch": "Off",
+    "node/no-unsupported-features/node-builtins": "Off",
+    "node/no-unpublished-import": "Off"
+  }
+}
